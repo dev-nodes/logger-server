@@ -13,8 +13,11 @@ function JsonParse(str) {
 }
 ws.on('connection', function connection(socket,req) {
   const ip = req.socket.remoteAddress
+  consola.info("New connection from",ip);
   if(!allowedIps.includes(ip)) {
+    consola.info(ip," not allowed");
      socket.terminate()
+     return;
   }
   socket.on('message', function message(msg) {
     msg = JsonParse(msg);
