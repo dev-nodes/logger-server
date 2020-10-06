@@ -1,0 +1,18 @@
+{
+  "name": "logger-server",
+  "description": "logger server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dev-nodes/logger-server.git",
+  "author": "unibtc <unibtc@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn stop && pm2 start ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js && pm2 delete ecosystem.config.js"
+  },
+  "dependencies": {
+    "consola": "^2.15.0",
+    "dotenv": "^8.2.0",
+    "ws": "^7.3.1"
+  }
+}
