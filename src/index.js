@@ -1,7 +1,6 @@
 const WebSocket = require("ws")
 const http = require("http")
 const consola = require('consola')
-const {authenticate} = require('./auth.js')
 const server = http.createServer();
 const ws = new WebSocket.Server({ server });
 const allowedIps = process.env.SERVERS.split(',')
