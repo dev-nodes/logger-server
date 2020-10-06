@@ -12,7 +12,8 @@ function JsonParse(str) {
   }
 }
 ws.on('connection', function connection(socket,req) {
-  const ip = req.headers['x-forwarded-for'] || req.ip || req.socket.remoteAddress
+  let ip = req.headers['x-forwarded-for'] || req.ip || req.socket.remoteAddress
+  ip = ip.split(",")[0];
   consola.info("New connection from",ip);
   if(!allowedIps.includes(ip)) {
     consola.info(ip," not allowed");
