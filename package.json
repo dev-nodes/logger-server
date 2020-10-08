@@ -1,7 +1,7 @@
 {
   "name": "logger-server",
   "description": "logger server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "repository": "git@github.com:dev-nodes/logger-server.git",
   "author": "unibtc <unibtc@gmail.com>",
